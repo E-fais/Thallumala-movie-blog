@@ -1,10 +1,10 @@
 import React from 'react'
 import './HeroBanner.css'
+import profile from '../../assets/images/profile.jpg'
 function HeroBanner() {
   return (
     <div className='banner'>
-        <img className='cover-image' 
-        src='https://wallpapercave.com/dwp1x/wp11390760.jpg'/>
+        <img className='cover-image'  src={profile}/>
     <h1>Thallumala Fan Page</h1>
     </div>
   )

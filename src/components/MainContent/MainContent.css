@@ -1,0 +1,53 @@
+.main{
+    background-color: #3D3635;
+    color: white;
+    margin-top: 0;
+    padding: 2em;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 5em;
+}
+.plot{
+    text-align: left;
+    padding: 2em;
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 60%;
+}
+.userReview{
+    text-align: center;
+    padding: 2em;
+    margin: 1em;
+}
+.reviewBox{
+    border-left: 1px solid white;
+    border-bottom: 1px solid white;
+    padding: 1em;
+    color: #FE650D;
+}
+.lineBreak{
+    height: 1px;
+    width:100%;
+    background-color: goldenrod;
+    margin-bottom: 1em;
+}
+.postReview{
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+.input{
+    height: 40px;
+    width: auto;
+    border-radius: 10px;
+    border-color:#3D3635;
+    padding-left: 3em;
+}
+button{
+    background-color: #FFC11F;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+}
