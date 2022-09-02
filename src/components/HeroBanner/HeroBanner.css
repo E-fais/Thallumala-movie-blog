@@ -1,0 +1,24 @@
+.cover-image{
+    width: 200px;
+    height: auto;
+    
+}
+.banner{
+    display: flex;
+    align-items:flex-end;
+    justify-content:flex-start;
+    gap:1em;
+    height:400px;
+    background-image: url('https://wallpapercave.com/wp/wp11390728.jpg');
+    background-size: cover;
+    padding: 2em;
+    padding-left: 10em;
+    
+}
+h1{
+    color:white;
+    font-weight: 700;
+    font-family:Arial, Helvetica, sans-serif;
+  font-size: 3em;
+ 
+}
