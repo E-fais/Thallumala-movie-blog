@@ -1,3 +1,6 @@
+body{
+    background-color:black;
+}
 .videos{
     margin-top: 0;
     background-color: black;
@@ -7,12 +10,7 @@
 text-align: center;
 font-family: Arial, Helvetica, sans-serif;
 padding-top: 1em;}
-.trailer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 2em;
-}
+
 .trailer img{
     width:500px;
     height: 300px;
@@ -20,12 +18,12 @@ padding-top: 1em;}
 .allTrailers{
     align-items: center;
     justify-content: center;
-    background-color: goldenrod;
+    background-color: #c33e05;
     color: white;
     display:flex;
      gap: 1em;
    justify-content: space-evenly;
-   padding: 1em;
+   padding: 1.5em;
    margin-bottom: 0;
 }
 .allTrailers img{
@@ -36,7 +34,7 @@ padding-top: 1em;}
     display: flex;
     justify-content: space-around;
     padding: 1em;
-    background-color: purple;
+    background-color: #c33e05;
 
 }
 .fan-title{
@@ -48,4 +46,12 @@ padding-top: 1em;}
    display: flex;
    justify-content: center;
    padding: 1em;
+}
+.main-trailer{
+    height: 390;
+    width:640;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2em;
 }
