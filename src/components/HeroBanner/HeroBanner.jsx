@@ -14,7 +14,7 @@ function HeroBanner() {
         />
     <motion.h1 className='page-title'
     animate={{y:0}}
-    initial={{y:"100vh"}}
+    initial={{y:"-100vh"}}
     transition={{delay:1,type:'spring',stiffness:300}}
     >Thallumala Fan Page
     </motion.h1>

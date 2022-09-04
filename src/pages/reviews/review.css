@@ -1,0 +1,49 @@
+.review-main{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+h1{
+    border-bottom: 1px solid white;
+    text-align: center;
+    color: #141414;
+}
+.article{
+    color: #141414;
+    padding-left: 6em;
+    padding-right: 6em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    background-color: #FBFBFB;
+    margin: 4em;
+    margin-top: 1em;
+    text-align: center;
+}
+.article h5 {
+    padding-left:1em ;
+    margin-top: 0;
+}
+p{
+    text-align:left;
+
+}
+a{ margin:0;
+    text-decoration: none;
+}
+.image img{
+    width: 60vw;
+    height:auto;
+    border-radius:3px;
+}
+.image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@media(max-width:600px){
+    .article{
+        padding: 1em;
+        margin: 4px;
+        text-align: center;
+    }
+}
