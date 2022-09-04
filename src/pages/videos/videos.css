@@ -1,0 +1,51 @@
+.videos{
+    margin-top: 0;
+    background-color: black;
+    color: goldenrod;
+}
+.title{
+text-align: center;
+font-family: Arial, Helvetica, sans-serif;
+padding-top: 1em;}
+.trailer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2em;
+}
+.trailer img{
+    width:500px;
+    height: 300px;
+}
+.allTrailers{
+    align-items: center;
+    justify-content: center;
+    background-color: goldenrod;
+    color: white;
+    display:flex;
+     gap: 1em;
+   justify-content: space-evenly;
+   padding: 1em;
+   margin-bottom: 0;
+}
+.allTrailers img{
+    height: 200px;
+}
+
+.fan-videos{
+    display: flex;
+    justify-content: space-around;
+    padding: 1em;
+    background-color: purple;
+
+}
+.fan-title{
+    font-family: Arial, Helvetica, sans-serif;
+    color: orange;
+    text-align: center;
+}
+.btn{
+   display: flex;
+   justify-content: center;
+   padding: 1em;
+}

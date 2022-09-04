@@ -10,12 +10,12 @@ function HeroBanner() {
         src={profile}
         initial={{x:"-100vw"}}
         animate={{x:0}}
-        transition={{delay:1,type:'tween',duration:1}}
+        transition={{delay:1.5,type:'tween',duration:0.5}}
         />
-    <motion.h1 
+    <motion.h1 className='page-title'
     animate={{y:0}}
     initial={{y:"100vh"}}
-    transition={{delay:1}}
+    transition={{delay:1,type:'spring',stiffness:300}}
     >Thallumala Fan Page
     </motion.h1>
     </div>
