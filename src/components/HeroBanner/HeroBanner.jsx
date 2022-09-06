@@ -8,9 +8,9 @@ function HeroBanner() {
         <motion.img 
         className='cover-image'  
         src={profile}
-        initial={{x:"-100vw"}}
-        animate={{x:0}}
-        transition={{delay:1.5,type:'tween',duration:0.5}}
+        initial={{opacity:0}}
+        animate={{opacity:1}}
+        transition={{delay:1.5,duration:2}}
         />
     <motion.h1 className='page-title'
     animate={{y:0}}

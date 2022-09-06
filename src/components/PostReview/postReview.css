@@ -1,0 +1,19 @@
+button{
+    background-color: #FFC11F;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    margin: 1em;
+}
+.input{
+    height: 40px;
+    width: auto;
+    border-radius: 10px;
+    border-color:#3D3635;
+    padding-left: 3em;
+}
+h3{
+color:'white'    
+}

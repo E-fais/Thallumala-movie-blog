@@ -1,14 +1,60 @@
 import React from "react";
 import "./review.css";
 import { motion } from "framer-motion";
+import { type } from "@testing-library/user-event/dist/type";
+const titleVariants={
+  initial:{
+    opacity:0,
+    x:'-100vw'
+  },
+  final:
+  {
+    opacity:1,
+    x:0
+  ,
+  transition:
+  {type:'spring',
+    delay:0.5
+  }
+}
+}
+const divVariants={
+  initial:{
+   opacity:0,
+   x:"-100vw"
+  },
+  final:{
+    opacity:1,
+    x:0,
+    transition:{
+      duration:1,
+      type:'spring',
+      delay:1.5
+
+    }
+  }
+}
 function Reviews() {
   return (
     <>
-      <h1>Reviews</h1>
-      <div className="review-main">
-        <div className="image">
+      <motion.h1
+      variants={titleVariants}
+      initial='initial'
+      animate='final'
+
+      >
+        Reviews
+        </motion.h1>
+      <div 
+      variants={divVariants}
+      className="review-main">
+        <motion.div 
+        variants={divVariants}
+        initial="initial"
+        animate="final"
+        className="image">
           <img src="https://igimages.gumlet.io/tamil/home/thallumaala310722_2.jpg?w=376&dpr=2.6" />
-        </div>
+        </motion.div>
         <div className="article">
           <h3>Thallumaala Movie Review : Style-filled fight fest</h3>
           <p>
@@ -64,6 +110,7 @@ function Reviews() {
             Read Full article on Manorama Online
           </a>
         </div>
+      
         <div className="article">
           <h3>Thallumala</h3>
           <p>

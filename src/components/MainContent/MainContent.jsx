@@ -1,6 +1,10 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./MainContent.css";
 import {motion} from 'framer-motion'
+import{auth,provider,db} from '../../firebase/FirebaseConfig'
+import { signInWithPopup } from "firebase/auth";
+import { getDocs, collection, deleteDoc, doc } from "firebase/firestore";
+import trash from '../../assets/icons/trash-icon-svg.svg'
 import {
   paragraph1,
   paragraph2,
@@ -8,10 +12,38 @@ import {
   paragraph4,
   reviews,
 } from "./Content";
+import PostReview from "../PostReview/PostReview";
+
+
 
 function MainContent() {
+  const [isAuth,setIsAuth]=useState(localStorage.getItem('isAuth'))
+ 
+  const  signInHandler=()=>{
+signInWithPopup(auth,provider).then((res)=> {
+localStorage.setItem("isAuth",true)
+setIsAuth(true)
+})
+  }
+  const [reviewLists,setReviewList]=useState([])
+  const reviewCollectionRef=collection(db,"review")
+  const deleteReview=async (id)=>{
+    const reviewDoc=doc(db,'review',id)
+    await deleteDoc(reviewDoc)
+      }
+  // useEffect(()=>{
+  //  const getReviews=async()=>{
+  //   const data=await getDocs(reviewCollectionRef)
+  //   setReviewList(data.docs.map((doc)=>({...doc.data(),id:doc.id})))
+  //  }
+  //  getReviews()
+  //  console.log(reviewLists)
+
+  // },[deleteReview])
+  
   return (
-    <div className="main">
+    <div>
+    <div className="first-section">
       <div className="plot">
         <h2>The Plot</h2>
         <p>{paragraph1}</p>
@@ -23,32 +55,33 @@ function MainContent() {
         <h2>Fans reviews</h2>
         <div className="lineBreak"></div>
         <div className="postReview">
-          <div>
-            <input
-              className="input"
-              type="text"
-              placeholder="write review..."
-            />
-          </div>
-          <div>
-            <motion.button
-            whileHover={{scale:1.1,backgroundColor:'white'}}
-            >
-              Post Review
-              </motion.button>
-          </div>
+         { !isAuth?
+         <button onClick={signInHandler}>Post Review</button>:
+         <PostReview/>}
         </div>
 
-        {reviews.map((review) => {
+        {reviewLists.map((review) => {
           return (
             <div className="reviewBox">
-              <h3>{review.name}</h3>
-              <div className="lineBreak"></div>
-              <p>{review.text}</p>
+              <div className="review-list">
+               <div> <h4>{review.review}</h4></div>
+            <div>    {isAuth&& review.author.id===auth.currentUser.uid&&
+                 <img  onClick={()=>deleteReview(review.id)} src={trash} alt="delete" /> }</div>
+                </div>
+                <div> <p>~{review.author.name}</p></div>
             </div>
           );
         })}
       </div>
+    </div>
+    <div className="second-section">
+      <h3>Top Cast</h3>
+      <div className="cast-container">
+        <div className="cast-item">
+         {/* star-card */}
+        </div>
+      </div>
+    </div>
     </div>
   );
 }
