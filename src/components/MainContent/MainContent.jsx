@@ -13,6 +13,7 @@ import {
   reviews,
 } from "./Content";
 import PostReview from "../PostReview/PostReview";
+import Cast from "../cast/Cast";
 
 
 
@@ -75,11 +76,10 @@ setIsAuth(true)
       </div>
     </div>
     <div className="second-section">
-      <h3>Top Cast</h3>
+      <h2>Top Cast</h2>
+      <div className="lineBreak-2"></div>
       <div className="cast-container">
-        <div className="cast-item">
-         {/* star-card */}
-        </div>
+       <Cast/>
       </div>
     </div>
     </div>

@@ -1,0 +1,28 @@
+.cast{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1em;
+    gap: 1em;
+    
+}
+.cast img{
+    height:100px;
+    width: 100px;
+    border-radius: 50%;
+}
+.card{
+    display: flex;
+    align-items: center;
+    gap:1em;
+    border-right: 1px solid goldenrod;
+    border-top: 1px solid goldenrod;
+    border-bottom: 1px solid gray;
+    padding-right: 8px;
+    padding-top: 2px;
+}
+.card-text{
+    line-height: 4px;
+}
+ a{
+    color:#3D3635;
+}
