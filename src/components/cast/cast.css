@@ -19,10 +19,26 @@
     border-bottom: 1px solid gray;
     padding-right: 8px;
     padding-top: 2px;
+    transition: all ease;
+}
+.card:hover{
+    transform: scale(1.1);
 }
 .card-text{
     line-height: 4px;
 }
  a{
     color:#3D3635;
+}
+@media (max-width:600px){
+      .cast{
+        flex-direction: column;
+        padding: 2em;
+      }
+      .card-text{
+        line-height:20px;
+      }
+      .card{
+        width: 250px;
+      }
 }

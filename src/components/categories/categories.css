@@ -6,7 +6,6 @@
     padding: 2em;
     background-color: #FBFBFB;
     color: goldenrod;
-    border-top:3px solid goldenrod;
     margin-bottom: 0px;
    
 
@@ -28,4 +27,14 @@
 }
 .category-item:hover{
     transform: scale(1.1);
+}
+@media(max-width:600px){
+    .category-image{
+        width: 70px;
+        height: 70px;
+    }
+    .category-item h2{
+        color: black;
+        font-size: 20px;
+    }
 }

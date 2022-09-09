@@ -14,7 +14,7 @@ function PostReview() {
       review,
       author: { name: auth.currentUser.displayName, id: auth.currentUser.uid },
     });}
-   navigate(0)
+  setReview('')
    }
   
   return (

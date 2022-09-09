@@ -1,0 +1,30 @@
+.navbar{
+    background-color: #3D3635;
+    display: flex;
+    justify-content:space-evenly;
+    gap: 1em;
+    align-items: center;
+    border-bottom: 1px solid white;
+    height: 45px;
+}
+.login-btn{
+    background:none;
+    color: #daa520;
+    font-size: 1.1em;
+}
+
+.navbar h3{
+    color: goldenrod;
+    padding: 0;
+    margin: 0;
+}
+@media(max-width:600px){
+    .navbar{
+        justify-content: space-between;
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+    .videos,.reviews{
+        display: none;
+    }
+}

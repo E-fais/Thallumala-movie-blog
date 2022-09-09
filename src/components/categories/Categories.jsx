@@ -24,15 +24,6 @@ function Categories() {
             />
             <h2>Reviews</h2>
         </div>
-        <div className='category-item'>
-            <img alt='songs' 
-            className='category-image'
-             src={songsLogo}
-             onClick={()=>navigate('songs')}
-             />
-            <h2>Songs</h2>
-        </div>
-
     </div>
   )
 }

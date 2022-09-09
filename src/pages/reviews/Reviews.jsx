@@ -1,11 +1,11 @@
-import React from "react";
+import React,{useEffect} from "react";
 import "./review.css";
 import { motion } from "framer-motion";
 import { type } from "@testing-library/user-event/dist/type";
-const titleVariants={
+const mainVariants={
   initial:{
     opacity:0,
-    x:'-100vw'
+    x:'100vw'
   },
   final:
   {
@@ -14,50 +14,47 @@ const titleVariants={
   ,
   transition:
   {type:'spring',
-    delay:0.5
+  mass:0.4,
+  damping:8,
+  when:'beforeChildren',
+  staggerChildren:0.7
   }
+},
+exit:{
+  x:'-100vw'
 }
 }
-const divVariants={
+const childVariants={
   initial:{
    opacity:0,
-   x:"-100vw"
   },
   final:{
-    opacity:1,
-    x:0,
-    transition:{
-      duration:1,
-      type:'spring',
-      delay:1.5
-
-    }
+    opacity:1
   }
 }
 function Reviews() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
-    <>
-      <motion.h1
-      variants={titleVariants}
-      initial='initial'
-      animate='final'
-
-      >
+    <motion.div
+    variants={mainVariants}
+    initial='initial'
+    animate='final'
+    exit='exit'
+    >
+      <h1>
         Reviews
-        </motion.h1>
+        </h1>
       <div 
-      variants={divVariants}
       className="review-main">
-        <motion.div 
-        variants={divVariants}
-        initial="initial"
-        animate="final"
-        className="image">
-          <img src="https://igimages.gumlet.io/tamil/home/thallumaala310722_2.jpg?w=376&dpr=2.6" />
-        </motion.div>
         <div className="article">
-          <h3>Thallumaala Movie Review : Style-filled fight fest</h3>
-          <p>
+          <motion.h3
+          variants={childVariants}>
+            Thallumaala Movie Review : Style-filled fight fest
+            </motion.h3>
+          <motion.p
+          variants={childVariants}>
             Thallumala is almost literally what that; a chain of fights. In the
             midst of this, the story is that Waseem (Tovino) falls for blogger
             Beepathu (Kalyani Priyadarshan) and the day before and on the day of
@@ -77,7 +74,7 @@ function Reviews() {
             high-voltage action and rap songs sung by Tovino and Kalyani
             themselves. Youngsters will enjoy this movie for Tovino and
             Kalyani’s style and charm.
-          </p>
+          </motion.p>
           <h5>~ Vinod Nair, Times Of India</h5>
           <a
             target="_blank"
@@ -110,7 +107,9 @@ function Reviews() {
             Read Full article on Manorama Online
           </a>
         </div>
-      
+        <div className="image">
+          <img src="https://igimages.gumlet.io/tamil/home/thallumaala310722_2.jpg?w=376&dpr=2.6" />
+        </div>
         <div className="article">
           <h3>Thallumala</h3>
           <p>
@@ -141,7 +140,7 @@ function Reviews() {
         </div>
         
       </div>
-    </>
+    </motion.div>
   );
 }
 
